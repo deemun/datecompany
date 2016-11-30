@@ -31,6 +31,11 @@ $(function() {
 // $('.navbar-collapse ul li a').click(function() {
 //     $(this).closest('.collapse').collapse('toggle');
 // });
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    }
+});
 
 // Google Maps Scripts
 // var map = null;
